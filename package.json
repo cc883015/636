@@ -1,23 +1,17 @@
 {
-  "name": "636",
+  "name": "task-manager",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Complete MERN Task Manager Application",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install-all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "start": "concurrently \"npm run prod --prefix backend\" \"npm start --prefix frontend\"",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm start --prefix frontend\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cc883015/636.git"
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "concurrently": "^7.0.0",
+    "mocha": "^11.0.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cc883015/636/issues"
-  },
-  "homepage": "https://github.com/cc883015/636#readme",
-  "description": "",
-  "dependencies": {
-    "bcryptjs": "^3.0.2"
-  }
+  "author": "Task Manager Team",
+  "license": "ISC"
 }
